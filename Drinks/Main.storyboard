@@ -25,30 +25,57 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" textLabel="gdJ-uN-2Gt" detailTextLabel="XcA-zo-N75" style="IBUITableViewCellStyleSubtitle" id="FKU-X8-Is5">
-                                <rect key="frame" x="0.0" y="72" width="414" height="55.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="drinkCell" rowHeight="68" id="FKU-X8-Is5" customClass="DrinkTableViewCell" customModule="Drinks" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="72" width="414" height="68"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FKU-X8-Is5" id="bUk-iH-X37">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="55.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="68"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gdJ-uN-2Gt">
-                                            <rect key="frame" x="20" y="10" width="33" height="20.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBP-um-LSn">
+                                            <rect key="frame" x="361" y="23" width="21" height="22"/>
+                                            <state key="normal" image="heart" catalog="system"/>
+                                            <connections>
+                                                <action selector="likeButtonPressed:" destination="FKU-X8-Is5" eventType="touchUpInside" id="2uM-BF-JF9"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Margarita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03N-NE-HKQ">
+                                            <rect key="frame" x="20" y="11" width="73" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="XcA-zo-N75">
-                                            <rect key="frame" x="20" y="31.5" width="44" height="14.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxG-Aa-WgP">
+                                            <rect key="frame" x="20" y="40" width="116" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mvs-w2-hc9">
+                                            <rect key="frame" x="316" y="14" width="37" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="41" id="1sw-bG-e27"/>
+                                                <constraint firstAttribute="width" constant="37" id="jvy-wX-5CF"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="WxG-Aa-WgP" firstAttribute="leading" secondItem="bUk-iH-X37" secondAttribute="leading" constant="20" symbolic="YES" id="8Al-ce-GyM"/>
+                                        <constraint firstItem="MBP-um-LSn" firstAttribute="top" secondItem="bUk-iH-X37" secondAttribute="top" constant="23" id="8eV-nv-JAi"/>
+                                        <constraint firstItem="03N-NE-HKQ" firstAttribute="leading" secondItem="bUk-iH-X37" secondAttribute="leading" constant="20" symbolic="YES" id="Bkv-Pk-dT7"/>
+                                        <constraint firstItem="WxG-Aa-WgP" firstAttribute="top" secondItem="03N-NE-HKQ" secondAttribute="bottom" constant="8" symbolic="YES" id="JaE-yX-gaM"/>
+                                        <constraint firstItem="MBP-um-LSn" firstAttribute="leading" secondItem="mvs-w2-hc9" secondAttribute="trailing" constant="8" symbolic="YES" id="Mpc-mh-RQm"/>
+                                        <constraint firstAttribute="trailing" secondItem="MBP-um-LSn" secondAttribute="trailing" constant="32" id="NFv-x9-QMh"/>
+                                        <constraint firstItem="mvs-w2-hc9" firstAttribute="top" secondItem="bUk-iH-X37" secondAttribute="top" constant="14" id="S7a-BP-ayF"/>
+                                        <constraint firstItem="03N-NE-HKQ" firstAttribute="top" secondItem="bUk-iH-X37" secondAttribute="top" constant="11" id="pQo-76-7rF"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="categoryLabel" destination="WxG-Aa-WgP" id="5LX-ZU-Sjh"/>
+                                    <outlet property="drinkImageView" destination="mvs-w2-hc9" id="WnG-L5-MUA"/>
+                                    <outlet property="drinkNameLabel" destination="03N-NE-HKQ" id="8Vf-r7-d77"/>
+                                    <outlet property="imageView" destination="mvs-w2-hc9" id="w32-T0-4Y4"/>
+                                    <outlet property="likeButton" destination="MBP-um-LSn" id="Uyw-vp-T7S"/>
                                     <segue destination="ifB-Pu-Aaf" kind="presentation" identifier="drinkPressed" id="Fcm-hF-gmL"/>
                                 </connections>
                             </tableViewCell>
@@ -65,22 +92,57 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tha-SF-W3k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633" y="-170"/>
+            <point key="canvasLocation" x="672.46376811594212" y="-170.08928571428569"/>
         </scene>
-        <!--View Controller-->
+        <!--Drink Detail View Controller-->
         <scene sceneID="D46-YE-x5U">
             <objects>
-                <viewController id="ifB-Pu-Aaf" sceneMemberID="viewController">
+                <viewController id="ifB-Pu-Aaf" customClass="DrinkDetailViewController" customModule="Drinks" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="x7E-hM-PgV">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="D44-tm-rsQ">
+                                <rect key="frame" x="143" y="20" width="128" height="129"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ud-Pt-1Be">
+                                <rect key="frame" x="186" y="185" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LD-5u-7bB">
+                                <rect key="frame" x="186" y="235" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="An3-es-KGp">
+                                <rect key="frame" x="87" y="264" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Fdo-gV-hDU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryLabel" destination="9LD-5u-7bB" id="j6I-hw-SR1"/>
+                        <outlet property="instructionsTextView" destination="An3-es-KGp" id="aQ0-cn-rUl"/>
+                        <outlet property="nameLabel" destination="5Ud-Pt-1Be" id="gNg-0t-CA3"/>
+                        <outlet property="thumbnailImageView" destination="D44-tm-rsQ" id="HxW-af-JSb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="atH-pB-KC4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1357" y="-170"/>
+            <point key="canvasLocation" x="1426" y="-170"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="x3I-z9-zbE">
@@ -102,6 +164,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

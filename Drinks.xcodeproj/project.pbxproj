@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D1083CC6251D403200060025 /* DrinkDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1083CC5251D403200060025 /* DrinkDetailViewController.swift */; };
+		D1083CCB2520CEA100060025 /* DrinkTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1083CCA2520CEA100060025 /* DrinkTableViewCell.swift */; };
 		D1D28BA9251D361C00B26F30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D28BA8251D361C00B26F30 /* AppDelegate.swift */; };
 		D1D28BAB251D361C00B26F30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D28BAA251D361C00B26F30 /* SceneDelegate.swift */; };
 		D1D28BB2251D361D00B26F30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1D28BB1251D361D00B26F30 /* Assets.xcassets */; };
@@ -37,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D1083CC5251D403200060025 /* DrinkDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetailViewController.swift; sourceTree = "<group>"; };
+		D1083CCA2520CEA100060025 /* DrinkTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkTableViewCell.swift; sourceTree = "<group>"; };
 		D1D28BA5251D361C00B26F30 /* Drinks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Drinks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1D28BA8251D361C00B26F30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1D28BAA251D361C00B26F30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 				D1D28BB6251D361D00B26F30 /* Info.plist */,
 				D1D28BE6251D365400B26F30 /* Models */,
 				D1D28BE8251D365400B26F30 /* VC's */,
+				D1083CCA2520CEA100060025 /* DrinkTableViewCell.swift */,
 			);
 			path = Drinks;
 			sourceTree = "<group>";
@@ -146,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				D1D28BE9251D365400B26F30 /* SearchTableViewController.swift */,
+				D1083CC5251D403200060025 /* DrinkDetailViewController.swift */,
 			);
 			path = "VC's";
 			sourceTree = "<group>";
@@ -288,8 +294,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1083CCB2520CEA100060025 /* DrinkTableViewCell.swift in Sources */,
 				D1D28BA9251D361C00B26F30 /* AppDelegate.swift in Sources */,
 				D1D28BF0251D36ED00B26F30 /* DrinkController.swift in Sources */,
+				D1083CC6251D403200060025 /* DrinkDetailViewController.swift in Sources */,
 				D1D28BEA251D365400B26F30 /* Drink.swift in Sources */,
 				D1D28BAB251D361C00B26F30 /* SceneDelegate.swift in Sources */,
 				D1D28BEB251D365400B26F30 /* SearchTableViewController.swift in Sources */,

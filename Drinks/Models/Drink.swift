@@ -17,11 +17,13 @@ struct Drink: Codable {
     let name: String
     let category: String
     let thumbnail: String
+    let instructions: String
     
     enum CodingKeys: String, CodingKey {
         case id = "idDrink"
         case name = "strDrink"
         case category = "strCategory"
         case thumbnail = "strDrinkThumb"
+        case instructions = "strInstructions"
     }
 }

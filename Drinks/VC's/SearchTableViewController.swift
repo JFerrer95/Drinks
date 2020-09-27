@@ -20,15 +20,20 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.view.endEditing(true)
         guard let searchTerm = searchBar.text else { return }
+        let view = UIViewController()
+        present(view, animated: true, completion: nil)
         drinkController.searchDrink(searchTerm: searchTerm) { (error, drinks) in
+            
             if let error = error {
                 print("errorrrr \(error)")
             }
             guard let drinks = drinks else { return }
             self.drinks = drinks.drinks
+            
             DispatchQueue.main.async {
-                
+                view.dismiss(animated: true, completion: nil)
                 self.tableView.reloadData()
             }
             
@@ -50,7 +55,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "drinkCell", for: indexPath) as! DrinkTableViewCell
         
         let drink = drinks[indexPath.row]
         let thumbnailURL = URL(string: drink.thumbnail)
@@ -61,22 +66,28 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         } catch {
             print(error)
         }
-        cell.textLabel?.text = drink.name
-        cell.detailTextLabel?.text = drink.category
+        
+        cell.drinkNameLabel.text = drink.name
+        
+        
         
         return cell
     }
+    
+
  
 
 
-    /*
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "drinkPressed" {
+            let destinationVC = segue.destination as? DrinkDetailViewController
+            guard let index = tableView.indexPathForSelectedRow else { return }
+            destinationVC?.drink = drinks[index.row]
+        }
     }
-    */
 
 }
