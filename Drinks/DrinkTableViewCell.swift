@@ -46,5 +46,8 @@ class DrinkTableViewCell: UITableViewCell {
         
         drinkNameLabel.text = drink.name
         categoryLabel.text = drink.category
+        drinkImageView.layer.cornerRadius = 11
     }
+    
+    
 }

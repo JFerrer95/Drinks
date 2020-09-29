@@ -33,43 +33,47 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MBP-um-LSn">
-                                            <rect key="frame" x="361" y="23" width="21" height="22"/>
+                                            <rect key="frame" x="361.5" y="23" width="20.5" height="22"/>
                                             <state key="normal" image="heart" catalog="system"/>
                                             <connections>
                                                 <action selector="likeButtonPressed:" destination="FKU-X8-Is5" eventType="touchUpInside" id="2uM-BF-JF9"/>
                                             </connections>
                                         </button>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Margarita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03N-NE-HKQ">
-                                            <rect key="frame" x="20" y="11" width="73" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxG-Aa-WgP">
-                                            <rect key="frame" x="20" y="40" width="116" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mvs-w2-hc9">
-                                            <rect key="frame" x="312" y="14" width="41" height="41"/>
+                                            <rect key="frame" x="20" y="14" width="41" height="41"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="mvs-w2-hc9" secondAttribute="height" multiplier="1:1" id="0Qa-Zi-6Ke"/>
                                                 <constraint firstAttribute="width" constant="41" id="8My-5E-ol0"/>
                                                 <constraint firstAttribute="height" constant="41" id="lZ7-0R-ckz"/>
                                             </constraints>
                                         </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="5Ly-Gk-3Lz">
+                                            <rect key="frame" x="69" y="11" width="284.5" height="46"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Margarita" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="03N-NE-HKQ">
+                                                    <rect key="frame" x="106" y="0.0" width="73" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Category Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WxG-Aa-WgP">
+                                                    <rect key="frame" x="84.5" y="25.5" width="116" height="20.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="WxG-Aa-WgP" firstAttribute="leading" secondItem="bUk-iH-X37" secondAttribute="leading" constant="20" symbolic="YES" id="8Al-ce-GyM"/>
                                         <constraint firstItem="MBP-um-LSn" firstAttribute="top" secondItem="bUk-iH-X37" secondAttribute="top" constant="23" id="8eV-nv-JAi"/>
-                                        <constraint firstItem="03N-NE-HKQ" firstAttribute="leading" secondItem="bUk-iH-X37" secondAttribute="leading" constant="20" symbolic="YES" id="Bkv-Pk-dT7"/>
-                                        <constraint firstItem="WxG-Aa-WgP" firstAttribute="top" secondItem="03N-NE-HKQ" secondAttribute="bottom" constant="8" symbolic="YES" id="JaE-yX-gaM"/>
-                                        <constraint firstItem="MBP-um-LSn" firstAttribute="leading" secondItem="mvs-w2-hc9" secondAttribute="trailing" constant="8" symbolic="YES" id="Mpc-mh-RQm"/>
                                         <constraint firstAttribute="trailing" secondItem="MBP-um-LSn" secondAttribute="trailing" constant="32" id="NFv-x9-QMh"/>
+                                        <constraint firstItem="5Ly-Gk-3Lz" firstAttribute="top" secondItem="bUk-iH-X37" secondAttribute="top" constant="11" id="Q6Z-Sy-Gn6"/>
+                                        <constraint firstItem="mvs-w2-hc9" firstAttribute="leading" secondItem="bUk-iH-X37" secondAttribute="leading" constant="20" symbolic="YES" id="Qo8-xf-2NC"/>
                                         <constraint firstItem="mvs-w2-hc9" firstAttribute="top" secondItem="bUk-iH-X37" secondAttribute="top" constant="14" id="S7a-BP-ayF"/>
-                                        <constraint firstAttribute="bottom" secondItem="WxG-Aa-WgP" secondAttribute="bottom" constant="7" id="fvA-La-5Je"/>
-                                        <constraint firstItem="03N-NE-HKQ" firstAttribute="top" secondItem="bUk-iH-X37" secondAttribute="top" constant="11" id="pQo-76-7rF"/>
+                                        <constraint firstItem="MBP-um-LSn" firstAttribute="leading" secondItem="5Ly-Gk-3Lz" secondAttribute="trailing" constant="8" id="TlM-yO-QW3"/>
+                                        <constraint firstAttribute="bottom" secondItem="mvs-w2-hc9" secondAttribute="bottom" constant="13" id="Zct-Ne-u7n"/>
+                                        <constraint firstItem="5Ly-Gk-3Lz" firstAttribute="leading" secondItem="mvs-w2-hc9" secondAttribute="trailing" constant="8" symbolic="YES" id="oA3-FY-NgW"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
