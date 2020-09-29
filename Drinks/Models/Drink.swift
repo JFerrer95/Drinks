@@ -18,6 +18,7 @@ struct Drink: Codable {
     let category: String
     let thumbnail: String
     let instructions: String
+    var isSaved: Bool = false
     
     enum CodingKeys: String, CodingKey {
         case id = "idDrink"
