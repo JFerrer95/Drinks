@@ -42,7 +42,6 @@
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mvs-w2-hc9">
                                             <rect key="frame" x="20" y="14" width="41" height="41"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="mvs-w2-hc9" secondAttribute="height" multiplier="1:1" id="0Qa-Zi-6Ke"/>
                                                 <constraint firstAttribute="width" constant="41" id="8My-5E-ol0"/>
                                                 <constraint firstAttribute="height" constant="41" id="lZ7-0R-ckz"/>
                                             </constraints>
@@ -72,7 +71,7 @@
                                         <constraint firstItem="mvs-w2-hc9" firstAttribute="leading" secondItem="bUk-iH-X37" secondAttribute="leading" constant="20" symbolic="YES" id="Qo8-xf-2NC"/>
                                         <constraint firstItem="mvs-w2-hc9" firstAttribute="top" secondItem="bUk-iH-X37" secondAttribute="top" constant="14" id="S7a-BP-ayF"/>
                                         <constraint firstItem="MBP-um-LSn" firstAttribute="leading" secondItem="5Ly-Gk-3Lz" secondAttribute="trailing" constant="8" id="TlM-yO-QW3"/>
-                                        <constraint firstAttribute="bottom" secondItem="mvs-w2-hc9" secondAttribute="bottom" constant="13" id="Zct-Ne-u7n"/>
+                                        <constraint firstAttribute="bottom" secondItem="WxG-Aa-WgP" secondAttribute="bottom" constant="11" id="Wp3-8N-WgY"/>
                                         <constraint firstItem="5Ly-Gk-3Lz" firstAttribute="leading" secondItem="mvs-w2-hc9" secondAttribute="trailing" constant="8" symbolic="YES" id="oA3-FY-NgW"/>
                                     </constraints>
                                 </tableViewCellContentView>

@@ -5,11 +5,15 @@
 //  Created by jonathan ferrer on 9/24/20.
 //
 
-import Foundation
+import UIKit
 
-class DrinkController {
+class NetworkController {
     
     let baseURL = URL(string: "https://www.thecocktaildb.com/api/json/v1/1/search.php")!
+    
+    static let shared = NetworkController()
+    
+    let cache = NSCache<NSString, UIImage>()
     
     func searchDrink(searchTerm: String, completion: @escaping (Error?, Drinks?) -> Void) {
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)

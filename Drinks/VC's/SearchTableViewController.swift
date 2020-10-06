@@ -9,7 +9,6 @@ import UIKit
 
 class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     
-    let drinkController = DrinkController()
     var drinks = [Drink]()
     
     @IBOutlet var searchBar: UITableView!
@@ -24,7 +23,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         guard let searchTerm = searchBar.text else { return }
         let view = UIViewController()
         present(view, animated: true, completion: nil)
-        drinkController.searchDrink(searchTerm: searchTerm) { (error, drinks) in
+        NetworkController.shared.searchDrink(searchTerm: searchTerm) { (error, drinks) in
             
             if let error = error {
                 print("errorrrr \(error)")
@@ -41,10 +40,6 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
     }
     
     
-    
-    
-    
-    
     // MARK: - Table view data source
     
     
@@ -59,9 +54,7 @@ class SearchTableViewController: UITableViewController, UISearchBarDelegate {
         
         let drink = drinks[indexPath.row]
         cell.set(drink: drink)
-        
-        
-        
+
         return cell
     }
     

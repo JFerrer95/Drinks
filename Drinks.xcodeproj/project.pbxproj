@@ -18,7 +18,7 @@
 		D1D28BDF251D363F00B26F30 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1D28BDE251D363F00B26F30 /* Main.storyboard */; };
 		D1D28BEA251D365400B26F30 /* Drink.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D28BE7251D365400B26F30 /* Drink.swift */; };
 		D1D28BEB251D365400B26F30 /* SearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D28BE9251D365400B26F30 /* SearchTableViewController.swift */; };
-		D1D28BF0251D36ED00B26F30 /* DrinkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D28BEF251D36ED00B26F30 /* DrinkController.swift */; };
+		D1D28BF0251D36ED00B26F30 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D28BEF251D36ED00B26F30 /* NetworkController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,7 +56,7 @@
 		D1D28BDE251D363F00B26F30 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		D1D28BE7251D365400B26F30 /* Drink.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Drink.swift; sourceTree = "<group>"; };
 		D1D28BE9251D365400B26F30 /* SearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchTableViewController.swift; sourceTree = "<group>"; };
-		D1D28BEF251D36ED00B26F30 /* DrinkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkController.swift; sourceTree = "<group>"; };
+		D1D28BEF251D36ED00B26F30 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,7 +159,7 @@
 		D1D28BF4251D36F800B26F30 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D1D28BEF251D36ED00B26F30 /* DrinkController.swift */,
+				D1D28BEF251D36ED00B26F30 /* NetworkController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -296,7 +296,7 @@
 			files = (
 				D1083CCB2520CEA100060025 /* DrinkTableViewCell.swift in Sources */,
 				D1D28BA9251D361C00B26F30 /* AppDelegate.swift in Sources */,
-				D1D28BF0251D36ED00B26F30 /* DrinkController.swift in Sources */,
+				D1D28BF0251D36ED00B26F30 /* NetworkController.swift in Sources */,
 				D1083CC6251D403200060025 /* DrinkDetailViewController.swift in Sources */,
 				D1D28BEA251D365400B26F30 /* Drink.swift in Sources */,
 				D1D28BAB251D361C00B26F30 /* SceneDelegate.swift in Sources */,

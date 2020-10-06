@@ -11,6 +11,8 @@ class DrinkTableViewCell: UITableViewCell {
     
     
     var drink: Drink?
+    
+    let cache = NetworkController.shared.cache
     @IBOutlet weak var drinkImageView: UIImageView!
     @IBOutlet weak var drinkNameLabel: UILabel!
     @IBOutlet weak var categoryLabel: UILabel!
@@ -35,18 +37,33 @@ class DrinkTableViewCell: UITableViewCell {
     
     func set(drink: Drink) {
         self.drink = drink
-        let thumbnailURL = URL(string: drink.thumbnail)
-        do {
-            let thumbnailData = try Data(contentsOf: thumbnailURL!)
-            let thumbnailImage = UIImage(data: thumbnailData)
-            drinkImageView?.image = thumbnailImage
-        } catch {
-            print(error)
-        }
-        
         drinkNameLabel.text = drink.name
         categoryLabel.text = drink.category
         drinkImageView.layer.cornerRadius = 11
+        
+        updateImageView(imageURL: drink.thumbnail)
+        
+
+        
+    }
+    
+    func updateImageView(imageURL: String) {
+        let urlString = NSString(string: imageURL)
+        if let image = cache.object(forKey: urlString) {
+            print("from Cashhhhhhhh")
+            drinkImageView.image = image
+            return
+        }
+        do {
+            let thumbnailURL = URL(string: imageURL)
+            let thumbnailData = try Data(contentsOf: thumbnailURL!)
+            guard let thumbnailImage = UIImage(data: thumbnailData) else { return }
+            cache.setObject(thumbnailImage, forKey: urlString)
+            drinkImageView?.image = thumbnailImage
+            print("to cash it goes tho")
+        } catch {
+            print(error)
+        }
     }
     
     
